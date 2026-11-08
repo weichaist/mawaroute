@@ -1,4 +1,42 @@
+<p align="right"><b>English</b> | <a href="README.ja.md">日本語</a></p>
+
 # MaWaRoute — visit to earn
+
+[![CI](https://github.com/weichaist/mawaroute/actions/workflows/ci.yml/badge.svg)](https://github.com/weichaist/mawaroute/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Flutter 3.47](https://img.shields.io/badge/Flutter-3.47-02569B?logo=flutter)
+![Firebase](https://img.shields.io/badge/Firebase-Functions%20v2-FFCA28?logo=firebase&logoColor=black)
+![Polygon](https://img.shields.io/badge/chain-Polygon-7B3FE4?logo=polygon&logoColor=white)
+
+**Find recommendations made for you, visit the shops, and earn rewards.**
+
+<table>
+  <tr>
+    <td align="center"><img src="docs/images/app.jpg" alt="The MaWaRoute app" width="160"><br><sub>Recommendations made for you</sub></td>
+    <td align="center"><img src="docs/images/avatars.jpg" alt="AI guide avatars" width="160"><br><sub>AI guide avatars, each with its own expertise</sub></td>
+    <td align="center"><img src="docs/images/avatar-chat.jpg" alt="Chatting with an avatar" width="160"><br><sub>Tell an avatar your plans and get suggestions</sub></td>
+    <td align="center"><img src="docs/images/photo-visit.jpg" alt="Photo proof of a visit" width="160"><br><sub>Take a photo at the shop to prove the visit and earn tokens</sub></td>
+    <td align="center"><img src="docs/images/rewards.jpg" alt="Rewards" width="160"><br><sub>Exchange tokens for coupons and rewards</sub></td>
+  </tr>
+</table>
+
+<sub>Screenshots from the released visitor app (2023). On the newest branch published here, the rewards tab is no longer linked from the app's navigation (see <a href="#project-status">Project status</a>).</sub>
+
+## Features
+
+- **AI guide avatars**: each avatar has its own personality and expertise,
+  chats with visitors, and recommends shops and products from its own
+  knowledge base.
+- **Photo-proof visits**: a photo taken at the shop is checked against the
+  shop's reference photo, and the visit earns tokens.
+- **Rewards on Polygon**: GGMT (ERC-20) tokens and NFTs, paid from one
+  minter wallet; each visitor gets a wallet on their phone at sign-up.
+- **Business console** for a place: invite shops, run campaigns with photo
+  tasks, set rewards, post news.
+- **Shop app** for staff: scan a visitor's coupon QR code to record a purchase.
+- **QR web chat**: a QR code at a shop opens a chat with its avatar, with no
+  app or sign-in.
+- **Voice translation** in the visitor app (experimental).
 
 MaWaRoute is a "visit to earn" platform for shopping areas. A **place** (a
 shopping mall, a station building, a shopping street) invites its shops and
