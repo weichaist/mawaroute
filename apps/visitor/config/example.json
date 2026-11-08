@@ -1,0 +1,33 @@
+{
+  "FIREBASE_PROJECT_ID": "your-firebase-project-id",
+  "FIREBASE_MESSAGING_SENDER_ID": "000000000000",
+  "FIREBASE_STORAGE_BUCKET": "your-firebase-project-id.firebasestorage.app",
+  "FIREBASE_ANDROID_API_KEY": "your-android-api-key",
+  "FIREBASE_ANDROID_APP_ID": "1:000000000000:android:0000000000000000000000",
+  "FIREBASE_IOS_API_KEY": "your-ios-api-key",
+  "FIREBASE_IOS_APP_ID": "1:000000000000:ios:0000000000000000000000",
+  "FIREBASE_IOS_CLIENT_ID": "",
+  "FIREBASE_IOS_BUNDLE_ID": "dev.acuri.mawarouteV2e",
+
+  "DEFAULT_PROFILE_IMAGE_URL": "",
+
+  "OPENAI_API_KEY": "",
+  "OPENAI_CHAT_MODEL": "gpt-4o",
+
+  "WEAVIATE_GRAPHQL_URL": "https://your-cluster.weaviate.cloud/v1/graphql",
+  "WEAVIATE_API_KEY": "",
+  "COHERE_API_KEY": "",
+
+  "MAPBOX_ACCESS_TOKEN": "",
+  "MAPBOX_STYLE_ID": "mapbox/streets-v12",
+
+  "ERC20_CONTRACT_ADDRESS": "",
+
+  "SUPPORT_EMAIL": "",
+
+  "HOMEPAGE_URL": "",
+  "INVITE_GUIDE_URL": "",
+  "GET_MATIC_GUIDE_URL": "",
+  "QUESTIONNAIRE_URL": "",
+  "TESTNET_FAUCET_URL": "https://faucet.polygon.technology/"
+}

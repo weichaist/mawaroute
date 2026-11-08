@@ -1,0 +1,18 @@
+[
+  {"name": "United States", "local_name": "United States", "flag": "🇺🇸", "code": "US", "dial_code": "+1", "language_name": "English", "language_code": "en"},
+  {"name": "Canada", "local_name": "Canada", "flag": "🇨🇦", "code": "CA", "dial_code": "+1", "language_name": "English", "language_code": "en"},
+  {"name": "Russia", "local_name": "Россия", "flag": "🇷🇺", "code": "RU", "dial_code": "+7", "language_name": "Русский", "language_code": "ru"},
+  {"name": "Thailand", "local_name": "ประเทศไทย", "flag": "🇹🇭", "code": "TH", "dial_code": "+66", "language_name": "ไทย", "language_code": "th"},
+  {"name": "Singapore", "local_name": "Singapore", "flag": "🇸🇬", "code": "SG", "dial_code": "+65", "language_name": "English", "language_code": "en"},
+  {"name": "France", "local_name": "France", "flag": "🇫🇷", "code": "FR", "dial_code": "+33", "language_name": "Français", "language_code": "fr"},
+  {"name": "Spain", "local_name": "España", "flag": "🇪🇸", "code": "ES", "dial_code": "+34", "language_name": "Español", "language_code": "es"},
+  {"name": "Italy", "local_name": "Italia", "flag": "🇮🇹", "code": "IT", "dial_code": "+39", "language_name": "Italiano", "language_code": "it"},
+  {"name": "Germany", "local_name": "Deutschland", "flag": "🇩🇪", "code": "DE", "dial_code": "+49", "language_name": "Deutsch", "language_code": "de"},
+  {"name": "Brazil", "local_name": "Brasil", "flag": "🇧🇷", "code": "BR", "dial_code": "+55", "language_name": "Português", "language_code": "pt"},
+  {"name": "United Kingdom", "local_name": "United Kingdom", "flag": "🇬🇧", "code": "GB", "dial_code": "+44", "language_name": "English", "language_code": "en"},
+  {"name": "China", "local_name": "中国", "flag": "🇨🇳", "code": "CN", "dial_code": "+86", "language_name": "中文", "language_code": "zh"},
+  {"name": "South Korea", "local_name": "대한민국", "flag": "🇰🇷", "code": "KR", "dial_code": "+82", "language_name": "한국어", "language_code": "ko"},
+  {"name": "Japan", "local_name": "日本", "flag": "🇯🇵", "code": "JP", "dial_code": "+81", "language_name": "日本語", "language_code": "ja"},
+  {"name": "Hong Kong", "local_name": "香港", "flag": "🇭🇰", "code": "HK", "dial_code": "+852", "language_name": "中文", "language_code": "zh"},
+  {"name": "Taiwan", "local_name": "臺灣", "flag": "🇹🇼", "code": "TW", "dial_code": "+886", "language_name": "中文", "language_code": "zh"}
+]

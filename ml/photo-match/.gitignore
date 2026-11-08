@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.env
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Data: never commit photos (they show real places and can show people)
+training_images/
+training_input_folder/
+training_input_folder_*/
+testing_input_folder/
+
+# Outputs: trained models, TFLite exports, plots
+mawaroute_output/
+*.keras
+*.h5
+*.tflite

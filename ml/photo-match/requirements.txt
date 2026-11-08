@@ -1,0 +1,7 @@
+# Python 3.10-3.13. TensorFlow 2.16+ ships Keras 3, which this code targets.
+tensorflow>=2.20,<2.22
+keras>=3.12,<4
+numpy>=1.26
+opencv-python>=4.10
+imutils==0.5.4
+matplotlib>=3.9

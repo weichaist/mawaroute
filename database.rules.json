@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "chats": {
+      "$chat": {
+        ".read": true,
+        ".write": false
+      }
+    }
+  }
+}

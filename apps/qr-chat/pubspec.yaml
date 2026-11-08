@@ -1,0 +1,48 @@
+name: mawaroute_qr_chat
+description: Web client for chatting with a shop's MawaRoute AI avatar (opened from a QR code).
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.0
+  flutter: '>=3.35.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^2.0.0
+  cloud_firestore: ^7.1.0
+  cloud_functions: ^7.0.1
+  firebase_analytics: ^13.0.1
+  firebase_app_check: ^0.5.1
+  firebase_core: ^5.1.0
+
+  blur: ^4.0.2
+  extended_image: ^10.1.0
+  flutter_native_splash: ^2.3.7
+  flutter_smart_dialog: ^5.3.1
+  get: ^4.6.6
+  http: ^1.1.0
+  latlong2: ^0.10.1
+  url_launcher: ^6.2.2
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter_native_splash:
+  background_image: "assets/images/splash_bg.png"
+  image: assets/images/splash_image.png
+  android: false
+  ios: false
+  web: true
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/files/

@@ -1,0 +1,45 @@
+# OS and editors
+.DS_Store
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# Flutter / Dart (each app also has its own .gitignore)
+.dart_tool/
+build/
+.flutter-plugins-dependencies
+coverage/
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Flutter/ephemeral/
+
+# Node / Cloud Functions
+node_modules/
+
+# Python (ml/)
+__pycache__/
+*.pyc
+.venv/
+
+# Firebase CLI
+.firebase/
+*-debug.log
+firebase-debug.*.log
+
+# Local configuration and secrets: never commit these
+apps/*/config/*.json
+!apps/*/config/example.json
+.env
+.env.*
+!.env.example
+.secret.local
+*.local
+**/android/local.properties
+**/android/key.properties
+*.keystore
+*.jks
+**/ios/Flutter/Secrets.xcconfig
+google-services.json
+GoogleService-Info.plist
+firebase_app_id_file.json

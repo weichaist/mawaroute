@@ -1,0 +1,110 @@
+name: mawaroute_visitor
+description: MawaRoute visitor app - chat with AI guide avatars, earn and spend rewards.
+publish_to: 'none'
+
+version: 1.3.1+45
+
+environment:
+  sdk: ^3.9.0
+  flutter: '>=3.35.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^2.0.0
+  cloud_firestore: ^7.1.0
+  cloud_functions: ^7.0.1
+  firebase_app_check: ^0.5.1
+  firebase_auth: ^7.0.1
+  firebase_core: ^5.1.0
+  firebase_messaging: ^17.0.1
+  firebase_storage: ^14.0.1
+
+  action_slider: ^0.7.0
+  animated_bottom_navigation_bar: ^1.3.0
+  animated_text_kit: ^4.2.2
+  any_link_preview: ^3.0.1
+  audioplayers: ^6.8.1
+  auto_size_text: ^3.0.0
+  blur: ^4.0.2
+  crypto: ^3.0.6
+  dart_openai: ^8.0.0
+  dotted_border: ^3.1.0
+  extended_image: ^10.1.0
+  flutter_image_compress: ^2.1.0
+  flutter_map: ^8.3.2
+  flutter_smart_dialog: ^5.3.1
+  flutter_svg: ^2.0.9
+  fuzzywuzzy: ^1.1.6
+  geolocator: ^14.0.1
+  get: ^4.6.5
+  graphql_flutter: ^5.1.2
+  http: ^1.1.0
+  image_picker: ^1.0.5
+  intl: ^0.20.2
+  latlong2: ^0.10.1
+  lottie: ^3.8.2
+  package_info_plus: ^10.2.2
+  path_provider: ^2.1.1
+  permission_handler: ^13.0.2
+  pin_code_fields: ^9.4.0
+  record: ^7.1.2
+  share_plus: ^13.3.1
+  shared_preferences: ^2.2.2
+  timeago: ^3.6.0
+  url_launcher: ^6.2.2
+  wallet: ^0.0.18
+  web3dart: ^3.0.3
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.3.7
+  flutter_test:
+    sdk: flutter
+
+flutter_launcher_icons:
+  ios: true
+  image_path: "assets/icons/launcher_icon_ios.png"
+  remove_alpha_ios: true
+  android: true
+  adaptive_icon_background: "assets/icons/ic_launcher_ic_launcher_background_A.png"
+  adaptive_icon_foreground: "assets/icons/ic_launcher_ic_launcher_foreground_A.png"
+
+flutter_native_splash:
+  background_image: "assets/images/cool_bg.png"
+  image: assets/icons/launcher_icon_trans_bg.png
+  branding: assets/icons/mawaroute_text_v2.png
+  branding_mode: bottom
+  ios: true
+  android_12:
+    image: assets/icons/launcher_icon_trans_bg.png
+    branding: assets/icons/mawaroute_text_android_v2.png
+    branding_mode: bottom
+    color: "#015ac1"
+  background_image_android: "assets/images/cool_bg.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/permission/
+    - assets/lottie_files/
+    - assets/icons/
+    - assets/svg/
+    - assets/model/
+
+  fonts:
+    - family: MPlusRounded1c
+      fonts:
+        - asset: assets/fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Regular.ttf
+        - asset: assets/fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Black.ttf
+          weight: 900
+        - asset: assets/fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Thin.ttf
+          weight: 300

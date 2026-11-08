@@ -1,0 +1,54 @@
+name: mawaroute_shop
+description: MaWaRoute app for shop staff.
+publish_to: 'none'
+
+version: 1.0.6+7
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^2.0.0
+  cloud_firestore: ^7.1.0
+  cloud_functions: ^7.0.1
+  firebase_auth: ^7.0.1
+  firebase_core: ^5.1.0
+  firebase_storage: ^14.0.1
+
+  animated_text_kit: ^4.2.2
+  auto_size_text: ^3.0.0
+  extended_image: ^10.1.0
+  flutter_easyloading: ^4.0.2
+  flutter_image_compress: ^2.0.4
+  flutter_smart_dialog: ^5.3.1
+  flutter_svg: ^2.0.7
+  get: ^4.6.5
+  http: ^1.1.0
+  qr_code_scanner_plus: ^2.3.2
+  timeago: ^3.5.0
+  wechat_assets_picker: ^10.1.3
+  intl: ^0.20.3
+  path_provider: ^2.1.6
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.14.4
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+# `dart run flutter_launcher_icons` regenerates the launcher icons.
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/shop_icon.png"
+  remove_alpha_ios: true
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/

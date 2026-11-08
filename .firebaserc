@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "default": "your-firebase-project-id"
+  },
+  "targets": {
+    "your-firebase-project-id": {
+      "hosting": {
+        "business": ["your-business-console-site-id"],
+        "qr-chat": ["your-qr-chat-site-id"]
+      }
+    }
+  }
+}

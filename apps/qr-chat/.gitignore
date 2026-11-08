@@ -1,0 +1,46 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ / VS Code
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# FVM
+.fvm/
+
+# Symbolication / obfuscation
+app.*.symbols
+app.*.map.json
+
+# Firebase CLI
+.firebase/
+
+# ---- Real configuration: never commit ----
+/config/*.json
+!/config/example.json
+.env
+*.env

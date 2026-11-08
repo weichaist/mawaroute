@@ -1,0 +1,6 @@
+# Hardhat / Foundry output if you add the sources back
+cache/
+artifacts/build-info/
+out/
+node_modules/
+.env

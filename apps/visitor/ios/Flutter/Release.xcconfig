@@ -1,0 +1,4 @@
+#include? "Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"
+#include "Generated.xcconfig"
+// Optional, gitignored: FIREBASE_REVERSED_CLIENT_ID = com.googleusercontent.apps.<id>
+#include? "Secrets.xcconfig"

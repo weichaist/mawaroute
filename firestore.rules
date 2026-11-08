@@ -1,0 +1,237 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /biz_users/{uid} {
+      allow read: if isUserAuthenticated(uid);
+      allow create: if isUserAuthenticated(uid);
+      allow update: if isUserAuthenticated(uid);
+    }
+    match /env/{uid} {
+      allow read: if isSignedIn();
+    }
+    match /places/{uid} {
+      allow read;
+      allow create, update: if isUserAuthenticated(uid);
+    }
+    match /places/{uid}/place_shops/{placeShopUid} {
+      allow read;
+      allow create, update: if isUserAuthenticated(uid);
+    }
+    match /shopping_mall/{shoppingMallUid} {
+      allow read;
+      allow create, update : if isSignedIn();
+    }
+    match /shops/{shopUid} {
+      allow read;
+      allow create, update : if isSignedIn();
+    }
+    match /shops/{shopUid}/shop_images/{shopImageUid} {
+      allow read;
+      allow create, update : if isSignedIn();
+      allow delete : if isSignedIn();
+    }
+    match /shops/{shopUid}/shop_visits/{shopVisitUid} {
+      allow read;
+      allow create : if isSignedIn();
+    }
+    match /{path=**}/shop_visits/{shopVisitUid} {
+      allow read;
+    }
+    match /shops/{shopUid}/shop_purchases/{shopPurchaseUid} {
+      allow read;
+      allow create : if isSignedIn();
+    }
+    match /{path=**}/shop_purchases/{shopPurchaseUid} {
+      allow read;
+    }
+    match /shops/{shopUid}/qr_code/{qrCodeUid} {
+      allow read, create, update : if isSignedIn();
+    }
+    match /shops/{shopUid}/user_qr_codes/{userQrCodeUid} {
+      allow read, create, update : if isSignedIn();
+    }
+    match /campaigns/{campaignId} {
+      allow read;
+      allow create, update : if isSignedIn();
+    }
+    match /campaign_task_images/{taskImageId} {
+      allow read;
+      allow create, update, delete : if isSignedIn();
+    }
+    match /campaigns/{campaignId}/campaign_tasks/{campaignTaskId} {
+      allow read;
+      allow create, update, delete : if isSignedIn();
+    }
+    match /campaigns/{campaignId}/campaign_tasks/{campaignTaskId}/completed_participants/{participantUid} {
+      allow read;
+      allow create, update : if isSignedIn();
+    }
+    match /m_users/{userId}/failed_campaign_tasks/{campaignTaskId}/unmatched_campaign_tasks/{participantUid} {
+      allow read;
+      allow create, update : if isSignedIn();
+    }
+    match /m_users/{userId}/credentials/{credentialId} {
+      allow read, create, update, delete : if isUserAuthenticated(userId);
+    }
+    match /m_users/{userId}/user_campaigns/{campaignId} {
+      allow read, create, update : if isUserAuthenticated(userId);
+    }
+    match /m_users/{userId}/user_campaigns/{campaignId}/user_campaign_tasks/{campaignTaskId} {
+      allow read, create, update : if isUserAuthenticated(userId);
+    }
+    match /m_users/{userId}/user_campaigns/{campaignId}/user_matched_campaign_tasks/{userMatchedCampaignTaskId} {
+      allow read, create, update : if isUserAuthenticated(userId);
+    }
+    match /m_users/{userId}/user_campaigns/{campaignId}/user_campaign_tasks/{campaignTaskId}/user_unmatched_campaign_tasks/{userUnmatchedCampaignTaskId} {
+      allow read, create, update : if isUserAuthenticated(userId);
+    }
+    match /m_users/{userId}/user_campaigns/{campaignId}/user_campaign_activities/{campaignActivityId} {
+      allow read, create, update : if isUserAuthenticated(userId);
+    }
+    match /m_users/{userId}/user_product_recommendations/{recommendationId} {
+      allow read, create, update : if isUserAuthenticated(userId);
+    }
+    match /m_users/{userId}/user_product_recommendations/{recommendationId}/recommended_products/{recommendedId} {
+      allow read, create, update : if isUserAuthenticated(userId);
+    }
+    match /m_user_preference/{userId} {
+      allow read, create, update : if isUserAuthenticated(userId);
+    }
+    match /m_user_preference/{userId}/tags/{tagId} {
+      allow read, create, update : if isUserAuthenticated(userId);
+    }
+    match /campaigns/{campaignId}/campaign_participants/{participantId} {
+      allow read;
+      allow create, update : if isSignedIn();
+    }
+    match /{path=**}/campaign_participants/{participantId} {
+      allow read: if isSignedIn();
+    }
+    match /{path=**}/completed_participants/{participantId} {
+      allow read;
+      allow create, update : if isSignedIn();
+    }
+    match /{path=**}/reward_participants/{participantId} {
+      allow read: if isSignedIn();
+    }
+    match /campaigns/{campaignId}/campaign_participants/{participantId}/completed_campaign_tasks/{taskId} {
+      allow read;
+      allow create, update : if isSignedIn();
+    }
+    match /{path=**}/campaign_activities/{activityId} {
+      allow read: if isSignedIn();
+    }
+    match /campaigns/{campaignId}/campaign_activities/{activityId} {
+      allow read;
+      allow create, update : if isSignedIn();
+    }
+    match /rewards/{rewardId} {
+      allow read;
+      allow create, update : if isSignedIn();
+    }
+    match /{path=**}/reward_receivers/{rewardReceiverId} {
+      allow read: if isSignedIn();
+    }
+    match /rewards/{rewardId}/reward_receivers/{rewardReceiverId} {
+      allow read, create, update : if isSignedIn();
+    }
+    match /rewards/{rewardId}/reward_participants/{participantId} {
+      allow read;
+      allow create, update, delete : if isSignedIn();
+    }
+    match /invitation_received/{invitationReceivedId} {
+      allow read;
+      allow create, update : if isSignedIn();
+    }
+    match /special_reward_code/{rewardId} {
+      allow read : if isSignedIn();
+    }
+    match /special_reward_code/{rewardId}/special_reward_receivers/{receiverId} {
+      allow read : if isSignedIn();
+      allow create, update : if isSignedIn();
+    }
+    match /top_rewards/{topRewardId} {
+      allow read : if isSignedIn();
+    }
+    match /instore_products/{instoreProductId} {
+      allow read : if isSignedIn();
+    }
+    match /image_to_be_deleted/{imageToBeDeletedId} {
+      allow read, create : if isSignedIn();
+    }
+    match /top_rewards/{topRewardId}/cashback_receivers/{topRewardReceiverId} {
+      allow read, create : if isSignedIn();
+    }
+    match /top_messages/{topMessageId} {
+      allow read : if isSignedIn();
+    }
+    match /mawaroute_news/{mawarouteNewsUid} {
+      allow read: if isSignedIn();
+      allow create, update : if isSignedIn();
+    }
+    match /m_users/{uid} {
+      allow read: if isSignedIn();
+      allow create: if isUserAuthenticated(uid);
+      allow update: if isUserAuthenticated(uid);
+    }
+    match /account_deletion_requests/{accountDeletionRequestUid} {
+      allow read, create: if isSignedIn();
+    }
+    match /m_user_logs/{uid} {
+      allow read;
+      allow create, update : if isSignedIn();
+    }
+    match /knowledge_places/{knowledgePlaceUid} {
+      allow read, create, update : if isSignedIn();
+    }
+    match /user_preferences/{preferenceUid} {
+      allow read, create, update : if isSignedIn();
+    }
+    match /avatar_rec/{avatarRecUid} {
+      allow create : if isSignedIn();
+    }
+    match /user_chats/{uid} {
+      allow read: if isUserAuthenticated(uid);
+      allow create: if isSignedIn();
+    }
+    match /user_rec_chats/{uid} {
+      allow read: if isUserAuthenticated(uid);
+      allow create, update: if isUserAuthenticated(uid);
+    }
+    match /user_rec_chats/{uid}/chats/{chatUid}{
+      allow read, create, update: if isUserAuthenticated(uid);
+    }
+    match /user_rec_chats/{uid}/chats/{chatUid}/chat_elements/{chatBubbleUid} {
+      allow read, create, update: if isUserAuthenticated(uid);
+    }
+    match /user_chats/{uid}/chats/{chatUid} {
+      allow read, create, update: if isUserAuthenticated(uid);
+    }
+    match /user_chats/{uid}/chats/{chatUid}/chat_bubble/{chatBubbleUid} {
+      allow read, create, update, delete: if isUserAuthenticated(uid);
+    }
+    match /ai_characters/{aiCharacterUid} {
+      allow read;
+    }
+    match /m_avatars/{avatarUid} {
+      allow read;
+      allow create, update : if isSignedIn();
+    }
+    match /m_avatars/{avatarUid}/knowledge_files/{knowledgeFileUid} {
+      allow read;
+      allow create, delete : if isSignedIn();
+    }
+    match /transfer_failures/{transferFailureId} {
+      allow create : if isSignedIn();
+    }
+    match /vip_testers/{testerUid} {
+      allow read : if isSignedIn();
+    }
+    function isSignedIn(){
+      return request.auth != null;
+    }
+    function isUserAuthenticated(userId) {
+      return isSignedIn() && userId == request.auth.uid;
+    }
+  }
+}

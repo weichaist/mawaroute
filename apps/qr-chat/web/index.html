@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A web client for chatting with a MawaRoute avatar">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Mawaroute AI">
+  <link rel="apple-touch-icon" href="icons/mawaroute_192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icons/mawaroute_192.png"/>
+
+  <title>Mawaroute AI</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Link previews. Add og:url / og:image (absolute URLs) for your deployment. -->
+  <meta property="og:title" content="マワルトAI">
+  <meta property="og:site_name" content="Mawaroute AI">
+  <meta property="og:description" content="あなたのショッピングをパーソナライズ。生成AIが導く、新しいお買い物体験">
+  <meta property="og:type" content="website">
+
+  <style id="splash-screen-style">
+    .flutter-loader {
+      z-index: 999999;
+    }
+    
+    #splash {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: 999998;
+        opacity: 1;
+        /* animation type and duration */
+        transition: opacity 0.25s;
+        background-color: #ffffff;
+        background-image: url("splash/img/light-background.png");
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    #splash.remove {
+      /* enable click through when run animation */
+      pointer-events: none;
+      /* start animation */
+      opacity: 0;
+    }
+
+    #splash .center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    #splash .contain {
+      display:block;
+      width:100%; height:100%;
+      object-fit: contain;
+    }
+
+    #splash .stretch {
+      display:block;
+      width:100%; height:100%;
+    }
+
+    #splash .cover {
+      display:block;
+      width:100%; height:100%;
+      object-fit: cover;
+    }
+
+    #splash .bottom {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      -ms-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+    }
+
+    #splash .bottomLeft {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    #splash .bottomRight {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  </style>
+  <script id="splash-screen-script">
+    function removeSplashFromWeb() {
+      const splashElement = document.getElementById("splash");
+      splashElement.classList.add("remove");
+      setTimeout(function () {
+        splashElement.remove();
+        document.getElementById("splash-screen-script")?.remove();
+      }, 750 /* animation time + wait rendering and others(500ms) */);
+    }
+  </script>
+</head>
+<body>
+  <!-- fetchStream(): streams the chat API response back to Dart (lib/utils/dartjs_fetch.dart). -->
+  <script src="custom_scripts.js"></script>
+  <div id="splash">
+    <picture>
+        <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x" media="(prefers-color-scheme: light)">
+        <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x" media="(prefers-color-scheme: dark)">
+        <img class="center" aria-hidden="true" src="splash/img/light-1x.png" alt="">
+    </picture>
+  </div>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
